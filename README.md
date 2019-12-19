@@ -1,4 +1,4 @@
-#Spark on Docker Sample
+# Spark on Docker Sample
 This code sample shows how to use Spark on Docker (http://spark.apache.org/) for distributed processing on the PROBA-V Mission Exploitation Platform. (https://proba-v-mep.esa.int/)
 The sample intentionally implements a very simple computation:
 for each PROBA-V tile in a given bounding box and time range, a histogram is computed. The results are then summed and printed. Computation of the histograms runs in parallel. For more details on how to run Spark without Docker, check out the Spark Quickstart Sample on [https://git.vito.be/projects/BIGGEO/repos/python-spark-quickstart/browse](https://git.vito.be/projects/BIGGEO/repos/python-spark-quickstart/browse)
