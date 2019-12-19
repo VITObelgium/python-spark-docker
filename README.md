@@ -16,7 +16,9 @@ The 3 required parameters for running Spark on Docker are:
 `YARN_CONTAINER_RUNTIME_DOCKER_IMAGE=your/image` To select which docker image you want to use
 `YARN_CONTAINER_RUNTIME_DOCKER_MOUNTS=/var/lib/sss/pipes:/var/lib/sss/pipes:rw,/usr/hdp/current/:/usr/hdp/current/:ro,/etc/hadoop/conf/:/etc/hadoop/conf/:ro,/etc/krb5.conf:/etc/krb5.conf:ro` To set which folder you want to have mounted in your docker container. The ones mentioned here are always required for Spark on Docker to work.
 
+## Mounting folders in the docker container
 This sample also needs the folder `/data/MTDA/TIFFDERIVED/PROBAV_L3_S1_TOC_333M` available in the executors, so this path is also added as read-only to the docker mounts (only of the executors).
+If you require any data outside `/data/MTDA` to be available in your container, this will have to be requested as we need to allow this on a per-folder basis.
 
 ## Py-files
 Also the histogram python classes are added using spark-submit's '--py-files' parameter. These files will automatically be mounted in the container by YARN.
